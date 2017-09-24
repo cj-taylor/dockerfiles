@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+function setScriptProperties {
+    set -e 
+    set -o pipefail
+}
+
+function _log {
+    local caller="$0"
+    local message="$1"
+    local logTime=$(date '+%Y-%m-%d %H:%M:%S');
+
+    printf "\n$logTime =====> $caller: $message\n\n"
+}
+
+setScriptProperties
