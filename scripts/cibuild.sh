@@ -8,6 +8,7 @@ function executeStep {
     _log "Executing Step: $step"
     $step || {
         _log "FAILED: $1";
+        ./cleanup.sh
         exit 1
     }
 }
