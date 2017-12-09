@@ -9,4 +9,5 @@
         - docker-ce
         - parallel
   script:
+    - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
     - ./scripts/cibuild.sh
